@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #f4f6f8;
+  color: #1a2332;
+  font-family: 'IBM Plex Sans', sans-serif;
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Top bar ── */
+.app-topbar {
+  background: #fff;
+  border-bottom: 1px solid #dde3ea;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin: 0 -1.5rem 0;
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a2332;
+  letter-spacing: -0.01em;
+}
+
+.app-logo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+.app-meta {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ── Section label ── */
+.section-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Parameter bar ── */
+.param-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 1rem 0 0;
+}
+
+.param-pill {
+  background: #fff;
+  border: 1px solid #dde3ea;
+  color: #475569;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: 'IBM Plex Mono', monospace;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.param-pill:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
+.param-pill.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+/* ── Clear button ── */
+.clear-btn {
+  background: #fff;
+  border: 1px solid #fca5a5;
+  color: #ef4444;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.73rem;
+  font-family: 'IBM Plex Mono', monospace;
+  cursor: pointer;
+  transition: all 0.1s;
+  margin-left: auto;
+}
+.clear-btn:hover { background: #fef2f2; }
+
+/* ── Site badge ── */
+.site-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #2563eb;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin-left: 0.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ── Map wrapper ── */
+.map-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #dde3ea;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* ── Chart wrapper ── */
+.chart-wrapper {
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.chart-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ── Mapbox popup override ── */
+.mapboxgl-popup-content {
+  background: #fff;
+  color: #1a2332;
+  border: 1px solid #dde3ea;
+  border-radius: 6px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.mapboxgl-popup-tip { border-top-color: #fff !important; }
